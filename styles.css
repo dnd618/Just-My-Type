@@ -21,6 +21,13 @@
   margin-top: 200px;
 }
 
+#keyboard-upper-container {
+    display: none;
+}
+
+#keyboard-lower-container {
+}
+
 #target-letter {
   font-size: 38px;  
 }
@@ -40,3 +47,4 @@
 .glyphicon-remove {
   color : #CD2626
 }
+
