@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;	
 }
-/*body {
-  background-color:#4e9189;
+body {
+  background-color: lightcoral;
   text-align: center;
   /*color:#fff;*/
   padding-top:40px;
   font-family: 'Lato', sans-serif;
-}*/
+}
 
 #prompt-container {
   font-family: Courier New, Courier, monospace;
@@ -16,12 +16,12 @@
   letter-spacing: 3px;
 }
 
-#yellow-block {
+#purple-block {
   position: absolute;
   margin-top: 10px;
   width: 15px;
   height: 15px;
-  background-color: yellow;
+  background-color: thistle;
 }
 
 .keyboard-container {
@@ -85,6 +85,6 @@ body {
 /* The typewriter cursor effect */
 /*@keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: blue; }
+  /*50% { border-color: blue; }*/
 }**/
 
