@@ -40,25 +40,9 @@ var sents = ["ten ate neite ate nee enet ite ate inet ent eate",
 "nee ene ate ite tent tiet ent ine ene ete ene ate"];
 // console.log(sents[0]);
 // console.log(sents);
-//IN CLASS EXAMPLE FOR SENTENCES; Basically you need to keep a variable counter for any keys you wanna count
-sentenceCounter = 0;
-val currentLetterCode = currentSentence.charCodeAt(letterCounter);
-function handleSentences() {
-$('#sentence').empty();
-$('#sentence').append(sentences[sentenceCounter]);
-    sentenceCounter++;
-}
-letterCounter = 0;
-currentSentence = sentence[sentenceCounter];
-function handleResponse(e) {
-    console.log(e);
-    if (e.type === 'keyup') {
-    currentSentence = sentence[sentenceCounter];
-    }
-}
-// //
-// $('#sentence').append(sentences[sentenceCounter]);
-// // // //Highlight keys in-class example
+
+$("#sentence").append( sents[0]);
+// // //Highlight keys in-class example
 // // $(document).on('keydown, function(e) {
 // //     handleHighlight(e.which);
 // //     console.log(e.which)
@@ -122,7 +106,7 @@ $( document ).ready(function() {
     }); 
      $(document).on('keypress', function(e) {
         if(e.which){
-            $('#target-letter').string.fromCharCode.append(e.which);  
+            $('#target-letter').append(e.which);  
 
             // appendLetter(e.which);
         }

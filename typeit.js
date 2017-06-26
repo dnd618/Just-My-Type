@@ -29,3 +29,19 @@
 // }
 //     });
 // });
+//IN CLASS EXAMPLE FOR SENTENCES; Basically you need to keep a variable counter for any keys you wanna count
+sentenceCounter = 0;
+val currentLetterCode = currentSentence.charCodeAt(letterCounter);
+function handleSentences() {
+$('#sentence').empty();
+$('#sentence').append(sentences[sentenceCounter]);
+    sentenceCounter++;
+}
+letterCounter = 0;
+currentSentence = sentence[sentenceCounter];
+function handleResponse(e) {
+    console.log(e);
+    if (e.type === 'keyup') {
+    currentSentence = sentence[sentenceCounter];
+    }
+}
