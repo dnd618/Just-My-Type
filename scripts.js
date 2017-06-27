@@ -18,6 +18,7 @@ var sents = ["ten ate neite ate nee enet ite ate inet ent eate",
 "itant eate anot eat nato inate eat anot tain eat" , 
 "nee ene ate ite tent tiet ent ine ene ete ene ate"];
 
+
 $("#sentence").append( sents[0]);
 	  
 //Switching keyboards between upper&lowercase
@@ -62,7 +63,7 @@ $( document ).ready(function() {
     }); 
      $(document).on('keypress', function(e) {
         if(e.which){
-            $('#target-letter').append(e.which);  
+            $('#target-letter').append(String.fromCharCode(e.which));  
             // appendLetter(e.which);
         }
      }); 
@@ -78,11 +79,11 @@ function addHighlight(code){
 function removeHighlight(code, defaultColor){
             $('#' + code).css('background-color', '#f5f5f5');
 }
-// function appendLetter (code){
-//     if(code == 116){
-//         $('#target-letter').append(String.fromCharCode(code));
-//     } 
-// }
+function appendLetter (code){
+    if(code == 116){
+        $('#target-letter').append(String.fromCharCode(code));
+    } 
+}
 //Simple function to hide/show keyboard 
 $(document).ready(function(){
     var upper = $('#keyboard-upper-container'),
@@ -152,3 +153,4 @@ var minutes = 0;
 var timeStart;
 var errorCount = 0;
 //How many errors per minute
+$("#purple-block").animate({ "left" : "700px" }, 3000);
