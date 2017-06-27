@@ -1,4 +1,4 @@
-// //Sentences--Doesn't work//
+// // --Doesn't work//
 // (function($) {
 //     $.fn.writeText = function(content) {
 //         var sentences = content.split(""),
@@ -12,18 +12,26 @@
 //     };
 // });
 //Adding sentence counter
-var sents = ["ten ate neite ate nee enet ite ate inet ent eate", 
+var sentence = ["ten ate neite ate nee enet ite ate inet ent eate", 
 "Too ato too nOt enot one totA not anot tOO aNot", 
 "oat itain oat tain nate eate tea anne inant nean", 
 "itant eate anot eat nato inate eat anot tain eat" , 
 "nee ene ate ite tent tiet ent ine ene ete ene ate"];
-
-
-$("#sentence").append( sents[0]);
+var sentenceCounter = 0;
+// var currentLetterCode = currentSentence.charCodeAt(letterCounter);
+function handleSentence() {
+    var sentenceDIV = $('#sentence');
+    sentenceDIV.empty();
+    sentenceDIV.append(sentence[sentenceCounter]);
+    sentenceCounter++;
+}
 	  
 //Switching keyboards between upper&lowercase
-$('#keyboard-upper-container').hide();
+
 $( document ).ready(function() {
+    $('#keyboard-upper-container').hide();
+    handleSentence();
+
     $(document).on('keydown',function(e){
         if (e.which === 16) {
             $('#keyboard-lower-container').hide();
@@ -73,26 +81,8 @@ function addHighlight(code){
 function removeHighlight(code, defaultColor){
             $('#' + code).css('background-color', '#f5f5f5');
 }
-function appendLetter (code){
-    if(code == 116){
-        $('#target-letter').append(String.fromCharCode(code));
-    } 
-}
-sentenceCounter = 0;
-var currentLetterCode = currentSentence.charCodeAt(letterCounter);
-function handleSentences() {
-$('#sentence').empty();
-$('#sentence').append(sentences[sentenceCounter]);
-    sentenceCounter++;
-}
-letterCounter = 0;
-currentSentence = sentence[sentenceCounter];
-function handleResponse(e) {
-    console.log(e);
-    if (e.type === 'keyup') {
-    currentSentence = sentence[sentenceCounter];
-    }
-}
+
+
 
 //Basic functions & variables
 var utils = {
@@ -129,5 +119,5 @@ var minutes = 0;
 //Track words typed
 var timeStart;
 var errorCount = 0;
-//How many errors per minute
-$("#purple-block").animate({ "left" : "700px" }, 3000);
+//Purple box animation
+$("#purple-block").animate({ "left" : "1000px" }, 3500);
