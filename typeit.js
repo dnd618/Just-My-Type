@@ -31,7 +31,7 @@
 // });
 //IN CLASS EXAMPLE FOR SENTENCES; Basically you need to keep a variable counter for any keys you wanna count
 sentenceCounter = 0;
-val currentLetterCode = currentSentence.charCodeAt(letterCounter);
+var currentLetterCode = currentSentence.charCodeAt(letterCounter);
 function handleSentences() {
 $('#sentence').empty();
 $('#sentence').append(sentences[sentenceCounter]);
@@ -45,3 +45,25 @@ function handleResponse(e) {
     currentSentence = sentence[sentenceCounter];
     }
 }
+// // //Highlight keys in-class example
+// // $(document).on('keydown, function(e) {
+// //     handleHighlight(e.which);
+// //     console.log(e.which)
+// // document.on ('keydown", function(key) {
+// //     handleHighlight(key.which, true);
+// // });
+// // function handleHighlight(code, kill) {
+// //     if (!kill) {
+// //         $('#' + code).css('background-color', 'white');
+// //     } else (!kill) {
+// //         $('#' + code).css('background-color', '#lightcoral');
+// //     }
+// // }    
+// //Trying to get keyboard highlights
+// // function handleHighlight(code, defaultColor){
+// //         if (defaultColor){
+// //             $('#' + code).css('background-color', '#f5f5f5');
+// //         } else {
+// //             $('#' + code).css('background-color', '#thistle');
+// //         }//
+
