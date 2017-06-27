@@ -17,7 +17,11 @@ var sentence = ["ten ate neite ate nee enet ite ate inet ent eate",
 "oat itain oat tain nate eate tea anne inant nean", 
 "itant eate anot eat nato inate eat anot tain eat" , 
 "nee ene ate ite tent tiet ent ine ene ete ene ate"];
+
+//Trying to call lines of sentences
+var letters = 0;
 var sentenceCounter = 0;
+var currentSentence = sentence[sentenceCounter];
 // var currentLetterCode = currentSentence.charCodeAt(letterCounter);
 function handleSentence() {
     var sentenceDIV = $('#sentence');
@@ -25,7 +29,11 @@ function handleSentence() {
     sentenceDIV.append(sentence[sentenceCounter]);
     sentenceCounter++;
 }
-	  
+// $( document.body).on('keyup',function(handleSentence) {
+//     $( document.body ).append( $( "#sentence" ) );
+//     var s = $( "sentence" ).length;
+//     $( "sentence" ).text();
+//   })
 //Switching keyboards between upper&lowercase
 
 $( document ).ready(function() {
@@ -72,9 +80,11 @@ $( document ).ready(function() {
      $(document).on('keypress', function(e) {
         if(e.which){
             $('#target-letter').append(String.fromCharCode(e.which));  
-        }
-     }); 
-});
+            //Purple box animation
+            $("#purple-block").animate({ "left" : "1000px" }, 3500);    
+            }
+        }); 
+    });
 function addHighlight(code){
             $('#' + code).css('background-color', 'thistle');
 }
@@ -112,12 +122,8 @@ var utils = {
 var keyCount = 0;
 var shiftMovesLeft = 0;
 var shiftMovesRight = 0;
-//Track purple cursor
-var position =-1;
 var seconds = 0;
 var minutes = 0;
 //Track words typed
 var timeStart;
 var errorCount = 0;
-//Purple box animation
-$("#purple-block").animate({ "left" : "1000px" }, 3500);

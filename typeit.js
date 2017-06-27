@@ -45,6 +45,27 @@ function handleResponse(e) {
     currentSentence = sentence[sentenceCounter];
     }
 }
+var sentenceCounter = 0;
+sentenceCounter = 0;
+var currentLetterCode = currentSentence.charCodeAt(letterCounter);
+function handleSentences() {
+    var sentenceDIV = $('#sentence').empty();
+    $('#sentence').append(sentences[sentenceCounter]);
+        sentenceCounter++;
+    }
+// letterCounter = 0;
+// currentSentence = sentence[sentenceCounter];
+// function handleResponse(e) {
+//     console.log(e);
+//     if (e.type === 'keyup') {
+//     currentSentence = sentence[sentenceCounter];
+//     }
+// }
+// function handleSentences () {
+// $("#sentence").html( sents[i]);
+// i++
+
+// }
 // // //Highlight keys in-class example
 // // $(document).on('keydown, function(e) {
 // //     handleHighlight(e.which);
@@ -99,3 +120,29 @@ function handleResponse(e) {
 //         $('span:contains(' +e.key+ ')').css('background-color', color);
 //     }
 // }
+
+//CharCodeAt example; function where the computer knows what characters to look at
+// var hello = 'hello';
+// undefined
+// var letterCounter = 0;
+// undefined
+// function test() {
+//     console.log(hello.charCodeAt(letterCounter);
+//     letterCounter++;
+// }
+// VM2894:2 Uncaught SyntaxError: missing ) after argument list
+// function test() {
+//     console.log(hello.charCodeAt(letterCounter));
+//     letterCounter++;
+// }
+// undefined
+// test();
+// test();
+// test();
+// test();
+// test();
+// console output :2 104
+// console output :2 101
+// console output :2 108
+// console output :2 108
+// console output :2 111
