@@ -29,11 +29,11 @@ function handleSentence() {
     sentenceDIV.append(sentence[sentenceCounter]);
     sentenceCounter++;
 }
-// $( document.body).on('keyup',function(handleSentence) {
-//     $( document.body ).append( $( "#sentence" ) );
-//     var s = $( "sentence" ).length;
-//     $( "sentence" ).text();
-//   })
+$( document.body).on('keyup',function(handleSentence) {
+    $( document.body ).append( $( "#sentence" ) );
+    var s = $( "sentence" ).length;
+    $( "sentence" ).text();
+  })
 //Switching keyboards between upper&lowercase
 
 $( document ).ready(function() {
