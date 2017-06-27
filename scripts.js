@@ -12,12 +12,13 @@
 //     };
 // });
 //Adding sentence counter
-var sents = ["ten ate neite ate nee enet ite ate inet ent eate", 
+var sentenceString = ["ten ate neite ate nee enet ite ate inet ent eate", 
 "Too ato too nOt enot one totA not anot tOO aNot", 
 "oat itain oat tain nate eate tea anne inant nean", 
 "itant eate anot eat nato inate eat anot tain eat" , 
 "nee ene ate ite tent tiet ent ine ene ete ene ate"];
-
+var stringParts = myString
+    
 $("#sentence").append( sents[0]);
 	  
 //Switching keyboards between upper&lowercase
@@ -67,11 +68,11 @@ $( document ).ready(function() {
         }
      }); 
 });
-function getKey(event) {
-    event = event || window.event;
-    var keyCode = event.which || event.keyCode;
-    var typedChar = String.fromCharCode(keycode);
-}
+// function getKey(event) {
+//     event = event || window.event;
+//     var keyCode = event.which || event.keyCode;
+//     var typedChar = String.fromCharCode(keycode);
+// }
 function addHighlight(code){
             $('#' + code).css('background-color', 'thistle');
 }
