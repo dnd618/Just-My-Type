@@ -67,6 +67,11 @@ $( document ).ready(function() {
         }
      }); 
 });
+function getKey(event) {
+    event = event || window.event;
+    var keyCode = event.which || event.keyCode;
+    var typedChar = String.fromCharCode(keycode);
+}
 function addHighlight(code){
             $('#' + code).css('background-color', 'thistle');
 }
@@ -135,3 +140,15 @@ var utils = {
         }
     }
 };
+//Calculating WPM
+var keyCount = 0;
+var shiftMovesLeft = 0;
+var shiftMovesRight = 0;
+//Track purple cursor
+var position =-1;
+var seconds = 0;
+var minutes = 0;
+//Track words typed
+var timeStart;
+var errorCount = 0;
+//How many errors per minute
