@@ -64,15 +64,9 @@ $( document ).ready(function() {
      $(document).on('keypress', function(e) {
         if(e.which){
             $('#target-letter').append(String.fromCharCode(e.which));  
-            // appendLetter(e.which);
         }
      }); 
 });
-function getKey(event) {
-    event = event || window.event;
-    var keyCode = event.which || event.keyCode;
-    var typedChar = String.fromCharCode(keycode);
-}
 function addHighlight(code){
             $('#' + code).css('background-color', 'thistle');
 }
@@ -84,39 +78,22 @@ function appendLetter (code){
         $('#target-letter').append(String.fromCharCode(code));
     } 
 }
-//Simple function to hide/show keyboard 
-$(document).ready(function(){
-    var upper = $('#keyboard-upper-container'),
-        lower = $('#keyboard-lower-container');
-
-    upper.hide();
-    $(document).on('keyup keydown', function(e) {
-        if (e.shiftKey) {
-            lower.hide();
-            upper.show();
-        } else {
-            upper.hide();
-            lower.show();
-        }
-        if (e.type === 'keydown') {
-            handleHighlight(e, 'thistle');
-        } else {
-            handleHighlight(e, '#f5f5f5');
-        }
-    });
-});
-//Creating reusable function for highlight
-function handleHighlight(e, color) {
-    var code = e.keyCode;
-    if (!e.isShift && utils.isAlpha(code)) {
-        code = e.keyCode +32;
-    }
-    if (utils.isAlphanumeric(code)) {
-        $('#'+code).css('background-color', color);
-    } else {
-        $('span:contains(' +e.key+ ')').css('background-color', color);
+sentenceCounter = 0;
+var currentLetterCode = currentSentence.charCodeAt(letterCounter);
+function handleSentences() {
+$('#sentence').empty();
+$('#sentence').append(sentences[sentenceCounter]);
+    sentenceCounter++;
+}
+letterCounter = 0;
+currentSentence = sentence[sentenceCounter];
+function handleResponse(e) {
+    console.log(e);
+    if (e.type === 'keyup') {
+    currentSentence = sentence[sentenceCounter];
     }
 }
+
 //Basic functions & variables
 var utils = {
     isAlphanumeric: function(code) {
