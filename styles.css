@@ -7,8 +7,10 @@
 }
 
 body {
+  background: url("https://68.media.tumblr.com/f7433131b8baeb8c8246da2bc24aa2d9/tumblr_ounoqnxQd01qfb1n5o2_1280.jpg");
   background-color: lightcoral;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   /*color:#fff;*/
   padding-top:40px;
   font-family: 'Lato', sans-serif;
