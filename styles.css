@@ -3,7 +3,7 @@
   padding: 0;	
 }
 .highlight {
-  background-color: thistle;
+  background-color: lavenderblush;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   margin-top: 10px;
   width: 15px;
   height: 15px;
-  background-color: thistle;
+  background-color: lavenderblush;
 }
 
 .keyboard-container {
@@ -55,8 +55,8 @@ body {
   color : #CD2626
 }
 #defaultcolor {
-  color: thistle;
+  color: lavenderblush;
 }
-/*.well {
-  background-color: turquoise;
-}*/
+.well {
+  background-color: lavenderblush;
+}
